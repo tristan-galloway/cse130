@@ -30,19 +30,19 @@ try:
         # Create variables to hold the user given username and password then set the sentinal.
         given_username = input("Username: ")
         given_password = input("Password: ")
-        Authentication = False
+        authentication = False
 
         # Iterate through the usernames and see if the given username is the same,
         # if it is, check the same index in passwords and check if it matches 
         # the given password. If it matches set authentication to true.
         for i, user in enumerate(usernames):
             if given_username == user and given_password == passwords[i]:
-                Authentication = True
+                authentication = True
             else:
                 i += 1
         
         # Let the user know whether or not they were authenticated
-        if Authentication == True:
+        if authentication == True:
             print("\nYou are authenticated!\n")
         else:
             print("\nYou are not authorized to use the system.\n")
