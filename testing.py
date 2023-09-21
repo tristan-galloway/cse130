@@ -4,4 +4,9 @@ for value in values:
    print(value)
 
 # %%
-
+x = "sun"
+y = "moon"
+z = "stars"
+print(x, y, z, sep="|", flush=False)
+ 
+# %%
