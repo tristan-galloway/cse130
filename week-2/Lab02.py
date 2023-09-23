@@ -7,9 +7,9 @@
 #      file with a list of valid username/password combinations
 # 4. What was the hardest part? Be as specific as possible.
 #      The problem that took me the longest to figure out was how to iterate through the list
-#      and return 1 time whether or not the login attemp was successful. I originally told the
-#      user within the for loop but if it was correct it would say it was correct once at the top
-#      then repeatedly say that they failed. I solved it after about 15 minutes of trial running what was going wrong
+#      and return 1 time whether or not the login attempt was successful. I originally told the
+#      user within the for loop, but if it was correct it would say it was correct once at the top
+#      then repeatedly say that they failed. I solved it after about 15 minutes of trial running what was going wrong.
 # 5. How long did it take for you to complete the assignment?
 #      1.75 Hours
 
