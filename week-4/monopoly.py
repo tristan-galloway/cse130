@@ -7,12 +7,17 @@
 #      can place/purchase a house on pensylvania ave, if so,
 #      return the cheapest option of doing so.
 # 4. What was the hardest part? Be as specific as possible.
-#      Was it the syntax of Python?
-#      Was it an aspect of the problem you are to solve?
-#      Was it the instructions or any part of the problem definition?
-#      Was it the submission process?
+#      I really struggled finding another way to code in the decisions
+#      using a more effecient way. I wanted to at least have less nested
+#      decisions. I also strugled to make lines the appropriate length
+#      when it came to inputs that were too long. The print function worked
+#      splitting it into two parts because it can take multiple arguments,
+#      but the inputs can't so I couldn't figure out another way to do it. 
+#      I also struggled with the triple quote prints at the bottom, the
+#      spacing is super weird to get it to display right and I didn't know
+#      how to make it better.
 # 5. How long did it take for you to complete the assignment?
-#      -total time in hours including reading the assignment and submitting the program-
+#      3 Hours
 
 def main():
     # Ask the user if they own a property on all three places.
@@ -20,10 +25,10 @@ def main():
 
     # If they don't own all the locations end the program, if they do ask what they have on Pennsylvania Ave
     if color_group == "n":
-        print("You cannot purchase a hotel until you own all the properties of a given color group.")
+        print("You cannot purchase a hotel until you own all the properties of",
+         "given color group.")
     elif color_group == "y":
-        prompt_pa = int(input("What is on Pennsylvania Avenue? \
-            0:nothing, 1:one house, ... 5:a hotel): "))
+        prompt_pa = int(input("What is on Pennsylvania Avenue? (0:nothing, 1:one house, ... 5:a hotel): "))
     
         # Ask what they have on Pennsylvania Ave, if 5 end. 
         # If they have less then 4 ask about North Carolina Ave
@@ -86,24 +91,23 @@ def main_a(prompt_hotels, prompt_nc, prompt_pc, prompt_pa):
             # If the there aren't enough houses, end
             # otherwise return the cost to purchase the
             # cost and houses needed in each location.
-            if prompt_houses > num_house_total_need:
+            if num_house_total_need > prompt_houses:
                 print("There are not enough houses available for purchase at this time.")
-            elif prompt_hotels <= num_house_nc_need:
-                if num_house_nc_need > 0 and num_house_pc_need > 0:
-                    print(f"""This will cost ${total_money_need}.
-        Purchase 1 hotel and {num_house_total_need} house(s).
-        Put 1 hotel on Pennsylvania and return any houses to the bank.
-        Put {num_house_nc_need} house(s) on North Carolina.
-        Put {num_house_pc_need} house(s) on Pacific.""")
-                elif num_house_nc_need > 0:
-                    print(f"""This will cost ${total_money_need}.
-        Purchase 1 hotel and {num_house_total_need} house(s).
-        Put 1 hotel on Pennsylvania and return any houses to the bank.
-        Put {num_house_nc_need} house(s) on North Carolina.""")
-                elif num_house_pc_need > 0:
-                    print(f"""This will cost ${total_money_need}.
-        Purchase 1 hotel and {num_house_total_need} house(s).
-        Put 1 hotel on Pennsylvania and return any houses to the bank.
-        Put {num_house_pc_need} house(s) on Pacific.""")
+            elif num_house_nc_need > 0 and num_house_pc_need > 0:
+                print(f"""\nThis will cost ${total_money_need}.
+    Purchase 1 hotel and {num_house_total_need} house(s).
+    Put 1 hotel on Pennsylvania and return any houses to the bank.
+    Put {num_house_nc_need} house(s) on North Carolina.
+    Put {num_house_pc_need} house(s) on Pacific.""")
+            elif num_house_nc_need > 0:
+                print(f"""\nThis will cost ${total_money_need}.
+    Purchase 1 hotel and {num_house_total_need} house(s).
+    Put 1 hotel on Pennsylvania and return any houses to the bank.
+    Put {num_house_nc_need} house(s) on North Carolina.""")
+            elif num_house_pc_need > 0:
+                print(f"""\nThis will cost ${total_money_need}.
+    Purchase 1 hotel and {num_house_total_need} house(s).
+    Put 1 hotel on Pennsylvania and return any houses to the bank.
+    Put {num_house_pc_need} house(s) on Pacific.""")
 
 main()
