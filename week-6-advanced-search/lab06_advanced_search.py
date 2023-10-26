@@ -29,7 +29,7 @@ def advanced_search():
 	# If unable to locate a file with that name 
 	# let the user know.
 	try:
-		
+
 		#  Convert the JSON data into a list.
 		with open(user_file, "r") as file:
 			text = file.read()
