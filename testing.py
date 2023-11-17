@@ -1,8 +1,9 @@
 # %%
-values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-for value in values:
-   print(value)
+user_number = ""
 
+while user_number != "done":
+    user_number = input("Enter a number (type done when finished): ")
+    print(f_number(int(user_number)))
 # %%
 x = "sun"
 y = "moon"
