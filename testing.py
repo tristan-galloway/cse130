@@ -57,3 +57,14 @@ def francois(num):
 for i in range(1, 10):
     print(f"François({i}) = {francois(i)}")
 # %%
+i = 2
+while i < 100:
+    print(i)
+    i += i
+# %%
+user_list = [True] * 10
+print(user_list)
+# %%
+for i in range(10):
+    print(i)
+# %%
