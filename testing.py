@@ -68,3 +68,9 @@ print(user_list)
 for i in range(10):
     print(i)
 # %%
+numbers = [1, 2, 4]
+
+numbers[1] = numbers[2] = 3
+
+print(numbers)
+# %%
